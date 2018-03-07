@@ -1,0 +1,3 @@
+function [y] = f(x)
+y = x .* sin(exp(x)+5) - log( x + 10)
+end
