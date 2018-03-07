@@ -1,0 +1,20 @@
+format long
+a = -4;
+b = 3;
+x1 = a;
+x2 = b;
+f = @(x1)x1.*sin(exp(xi)+5) - log(x1+10);
+f1 = f(x1);
+f2 = f(x2);
+step = 0.0000001;
+ii = 0;
+while abs(x1-x2)>step
+    ii = ii +1;
+    x3 = (x1+x2)/2;
+    f3 = f(x3);
+    if f3 .* f1 < 0 
+            x2 = x3;f2 = f3;
+    else
+            x1 = x3;f1 = f3'
+    end
+end
