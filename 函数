@@ -1,3 +1,10 @@
+
+
+
 function [y] = f(x)
 y = x .* sin(exp(x)+5) - log( x + 10)
 end
+
+找到零点
+[x0,y0] = ginput(1)
+括号里是数量（在输出页面编辑）
