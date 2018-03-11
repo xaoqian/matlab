@@ -1,0 +1,4 @@
+syms n k
+f1 = 1/(k*(k+1))
+sl = symsum(f1,k,1,n)
+sl = 1 - 1/(n+1)
