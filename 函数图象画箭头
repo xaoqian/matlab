@@ -1,0 +1,8 @@
+a=0;b=pi;hold off;hold on;
+X = linspace(a,b,200);
+Y = sin(x);
+plot(X,Y);
+[ax,ay]=ginput(2);
+[arrowx,arrowy]=dsxy2figxy(gca,ax,ay)
+annotation('arrow',arrowx,arrowy);
+annotation('textarrow',arrowx,arrowy,'String','要说的话')
