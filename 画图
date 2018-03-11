@@ -1,0 +1,15 @@
+hold off;
+
+Ax =[0];Ay=[5];
+ezplot('x^2+x*y+y^2-y = 3');hold on
+ezplot('x^2+1.5*x*y - y^2 = 9')
+plot(Ax,Ay,'r*')
+c = (3+4/3)^(1/2)
+a = c *(sqrt(3)/2);
+b = 1
+
+
+T = linspace(0,2*pi,200);
+X = a*cos(T)-(2/3+c*sin(T));
+Y = 2/3+c*sin(T);
+plot(X,Y,'k')
