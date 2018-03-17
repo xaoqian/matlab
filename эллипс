@@ -1,0 +1,8 @@
+ezplot('(x/2)^2+(y/3)^2= 1')
+a = 2;
+b = 3;
+x = @(t) a.*cos(t);
+y = @(t) b.*sin(t);
+T = linspace(0,2*pi,100);
+X = x(T);Y = y(T);
+plot(X,Y,'y','Linewidth',2);
