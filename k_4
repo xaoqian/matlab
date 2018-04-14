@@ -1,0 +1,16 @@
+hold off;
+y = @(t) 2*sqrt(5)/sqrt(3).*sin(t);
+x = @(t) sqrt(5).*cos(t)- y(t)/2;
+T = 0:0.01:2*pi;
+X = x(T);Y = y(T);
+plot(x(T),y(T),'b-','LineWidth',3);hold on;
+%ezplot('(x-5)^2/2+(y-3)^2= 1')
+y1 = @(t) sin(t)+3;
+x1 = @(t) sqrt(2)*cos(t)+5;
+plot(x1(T),y1(T),'r-','LineWidth',2);
+X0 = 4;Y0 = 0;
+plot(X0,Y0,'k*');
+dist = @(x,y,x0,y0) sqrt((x0-x).^2+(y0-y).^2);
+R = dist(X,Y,X0,Y0);
+figure(2);
+plot(T,R);
